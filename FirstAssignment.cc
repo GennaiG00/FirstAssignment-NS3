@@ -5,15 +5,27 @@
 #include "ns3/point-to-point-module.h"
 #include "ns3/flow-monitor-module.h"
 
-//   Network Topology
-//
-//       10.1.1.0
-// n0 -------------- n1
-//    point-to-point
-//
-//       10.1.2.0
-// n2 -------------- n3
-//    point_to_point
+                 /*
+Network Topology
+                   ----------------
+                
+                   10.1.1.0 Network      10.1.2.0 Network
+                  +---------------+      +---------------+
+                  |               |      |               |
+                  |   Node 0      |      |   Node 2      |
+                  | (Client A)    |      | (Client B)    |
+                  +---------------+      +---------------+
+                         |                       |
+                   Point-to-Point Link     Point-to-Point Link
+                   DataRate: 5Mbps         DataRate: 5Mbps
+                   Delay: 2ms              Delay: 2ms
+                         |                       |
+                  +---------------+      +---------------+
+                  |               |      |               |
+                  |   Node 1      |      |   Node 3      |
+                  | (Server A)    |      | (Server B)    |
+                  +---------------+      +---------------+
+*/
 
 using namespace ns3;
 
